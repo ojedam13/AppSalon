@@ -23,4 +23,12 @@ body {
     width: 95%;
     margin: 0 auto;
     padding-top: 3rem;
+
+    .seccion{
+        display: none;
+        margin-top: 3rem;
+        &:first-of-type{
+            display: block;
+        }
+    }
 }
