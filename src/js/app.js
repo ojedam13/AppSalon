@@ -2,16 +2,21 @@ let pagina = 1;
 
 document.addEventListener('DOMContentLoaded', function () {
     iniciarApp();
-})
+});
 
 function iniciarApp() {
     mostrarServicios();
 
     // Resalta div segun el tab al q se presiona
     mostrarSeccion();
+    
     // oculta o muestra segun tab q presiona
     cambiarSeccion();
-}
+
+    //paginacion anterior y siguiente
+    paginaSiguiente();
+    paginaAnterior();
+ }
 
 function mostrarSeccion() {
     const seccionActual = document.querySelector(`#paso-${pagina}`);
@@ -25,7 +30,7 @@ function mostrarSeccion() {
 function cambiarSeccion() {
     const enlaces = document.querySelectorAll('.tabs button');
 
-    enlaces.forEach( enlace => {
+    enlaces.forEach(enlace => {
         enlace.addEventListener('click', e => {
             e.preventDefault();
 
@@ -44,8 +49,8 @@ function cambiarSeccion() {
             const tab = document.querySelector(`[data-paso="${pagina}"]`);
             tab.classList.add('actual');
 
-        })
-    }) 
+        });
+    });
 }
 
 async function mostrarServicios() {
@@ -105,4 +110,20 @@ function seleccionarServicio(e) {
         elemento.classList.add('seleccionado');
     }
     
+}
+
+function paginaSiguiente() {
+    const paginaSiguiente = document.querySelector('#siguiente');
+    paginaSiguiente.addEventListener('click', () => {
+        pagina++;
+        console.log(pagina);
+    })
+}
+
+function paginaAnterior() {
+    const paginaAnterior = document.querySelector('#anterior');
+    paginaAnterior.addEventListener('click', () => {
+        pagina--;
+        console.log(pagina);
+    });
 }
