@@ -223,7 +223,7 @@ function nombreCita() {
         }
     });
 }
-
+//funcion mostrar alerta
 function mostrarAlerta(mensaje, tipo) {
     // si hay una alerta previa, enonces no crear otra
     const alertaPrevia = document.querySelector('.alerta');
@@ -234,6 +234,7 @@ function mostrarAlerta(mensaje, tipo) {
     const alerta = document.createElement('DIV');
     alerta.textContent = mensaje;
     alerta.classList.add('alerta');
+
 
     if (tipo === 'error') {
         alerta.classList.add('error');
