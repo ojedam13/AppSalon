@@ -29,6 +29,9 @@ function iniciarApp() {
 
     // muestra el resumen de la cita (o msj de error)
     mostrarResumen();
+
+    // almacena nombre de la cita en el obj
+    nombreCita();
 }
 
 function mostrarSeccion() {
@@ -200,4 +203,19 @@ function mostrarResumen() {
         //agregar a resumen Div
         resumenDiv.appendChild(noServicios);
     }
+}
+
+function nombreCita() {
+    const nombreInput = document.querySelector('#nombre');
+
+    nombreInput.addEventListener('input', e => {
+        const nombreTexto = e.target.value.trim();
+
+        // validacion de q nombreTexto debe tener algo
+        if (nombreTexto === '' || nombreTexto.length < 3) {
+            
+        } else {
+            cita.nombre = nombreTexto;
+        }
+    })
 }
