@@ -19,3 +19,16 @@
         border: none;
     }
 }
+
+.alerta{
+    padding: 3rem;
+    text-align: center;
+    color: $blanco;
+    width: 100%;
+    display: block;
+
+    &.error{
+        background-color: rgb(194,0,0);
+        
+    }
+}
