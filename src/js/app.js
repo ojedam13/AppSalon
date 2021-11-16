@@ -223,7 +223,7 @@ function nombreCita() {
         }
     });
 }
-//funcion mostrar alerta
+
 function mostrarAlerta(mensaje, tipo) {
     // si hay una alerta previa, enonces no crear otra
     const alertaPrevia = document.querySelector('.alerta');
