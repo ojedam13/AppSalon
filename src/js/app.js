@@ -32,6 +32,9 @@ function iniciarApp() {
 
     // almacena nombre de la cita en el obj
     nombreCita();
+
+     // almacena la fecha de la cita en el obj
+    fechaCita();
 }
 
 function mostrarSeccion() {
@@ -249,4 +252,20 @@ function mostrarAlerta(mensaje, tipo) {
         alerta.remove();
     }, 2000);
 
+}
+
+function fechaCita(); {
+    const fechaInput = document.querySelector('#fecha');
+    fechaInput.addEventListener('input', e => {
+       
+        const dia = new Date(e.target.value).getUTCDate();
+        
+        if ([0].includes(dia)) {
+            e.preventDefault();
+            fechaInput.value = '';
+            mostrarAlerta('Domingo no son permitidos', 'error');
+        } else {
+            cita.fecha = fechaInput.value;
+        }
+    })
 }
