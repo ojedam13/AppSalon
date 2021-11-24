@@ -1,7 +1,7 @@
 {
   "name": "salon-php-sass",
   "version": "1.0.0",
-  "description": "",
+  "description": "salon de belleza",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,5 +25,15 @@
     "gulp-webp": "^4.0.1",
     "terser": "^5.3.8"
   },
-  "dependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojedam13/AppSalon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ojedam13/AppSalon/issues"
+  },
+  "homepage": "https://github.com/ojedam13/AppSalon#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
